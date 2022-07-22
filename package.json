@@ -1,0 +1,31 @@
+{
+  "name": "study-with-me-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node server.js",
+    "migrate": "npx prisma migrate",
+    "studio": "npx prisma studio"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com-home:parkseyeonn/study-with-me-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server": "^3.10.0",
+    "dotenv": "^16.0.1",
+    "graphql": "^16.5.0",
+    "graphql-tools": "^8.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/node": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "nodemon": "^2.0.19",
+    "prisma": "^4.1.0"
+  }
+}
