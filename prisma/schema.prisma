@@ -9,3 +9,36 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  nickName  String   @unique
+  password  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Group {
+  id   Int    @id @default(autoincrement())
+  name String
+}
+
+model GroupMember {
+  userId  Int
+  groupId Int
+
+  @@id([userId, groupId])
+}
+
+model Category {
+  id   Int    @id @default(autoincrement())
+  name String
+}
+
+model GroupCategory {
+  groupId    Int
+  categoryId Int
+
+  @@id([groupId, categoryId])
+}
