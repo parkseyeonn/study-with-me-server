@@ -9,9 +9,4 @@ export default gql`
     createdAt: String!
     updatedAt: String!
   }
-  interface MutationResponse {
-    code: String!
-    success: Boolean!
-    message: String
-  }
 `;
